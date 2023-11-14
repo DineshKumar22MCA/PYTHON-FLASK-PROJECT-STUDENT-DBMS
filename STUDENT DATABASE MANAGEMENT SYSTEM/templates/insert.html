@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> STUDENT </title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">;
+
+</head>
+<body>
+<h1> ADD NEW STUDENT RECORD </h1>
+
+<form action=" " method="POST">
+
+    <label> ID </label>
+    <input type="number" name="id" required>
+
+    <label> NAME </label>
+    <input type="text" name="name" required>
+
+    <label> AGE </label>
+    <input type="number" name="age" required>
+
+    <label> STD</label>
+    <input type="text" name="std" required>
+
+    <input type="submit" value="SAVE" required>
+
+</form>
+</body>
+</html>

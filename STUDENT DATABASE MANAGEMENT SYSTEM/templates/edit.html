@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> STUDENT </title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">;
+
+</head>
+<body>
+<h1> EDIT RECORD </h1>
+
+<form action=" " method="POST">
+
+    <label> ID </label>
+    <input type="number" name="id" value="{{a.id}}" required>
+
+    <label> NAME </label>
+    <input type="text" name="name"  value="{{a.s_name}}" required>
+
+    <label> AGE </label>
+    <input type="number" name="age" value="{{a.age}}" required>
+
+    <label> STD</label>
+    <input type="text" name="std" value="{{a.std}}" required>
+
+    <input type="submit" value="UPDATE">
+
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> STUDENTS </title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">;
+    <h1> STUDENT INFORMATION </h1>
+</head>
+<body>
+
+
+<h3>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                {{message}}
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+</h3>
+
+<p> <a href="{{url_for('insert')}}"> ADD STUDENT </a> </p>
+<br>
+<table>
+    <head>
+        <tr>
+            <th> ID </th>
+            <th> NAME </th>
+            <th> AGE </th>
+            <th> STD </th>
+            <th> EDIT </th>
+            <th> DELETE </th>
+        </tr>
+    </head>
+    <body>
+    {% for i in a %}
+    <tr>
+        <td>{{i.id}}</td>
+        <td>{{i.s_name}}</td>
+        <td>{{i.age}}</td>
+        <td>{{i.std}}</td>
+        <td><a href="{{url_for('edit',id=i.id)}}"> EDIT </a></td>
+        <td><a onclick="return confirm('are you sure to delete?')" href=
+                "{{url_for('delete',id=i.id)}}"> DELETE </a> </td>
+    </tr>
+    {% endfor %}
+    </body>
+
+</table>
+
+</body>
+</html>
